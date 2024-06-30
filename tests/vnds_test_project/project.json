@@ -1,0 +1,151 @@
+{
+	"Data": {
+		"Replacements": {
+			"%name%": "[color=green]Name[/color]"
+		},
+		"Script": {
+			"Start": {
+				"Connections": {
+					"0": {
+						"script_171977351174001692582478": 0
+					}
+				},
+				"Fields": {
+
+				},
+				"Type": "Start",
+				"X": 0,
+				"Y": 0
+			},
+			"script_17197735002370763709240": {
+				"Connections": {
+					"0": {
+						"script_171977364524601159148473": 0
+					},
+					"1": {
+						"script_17197736749640784218452": 0
+					}
+				},
+				"Fields": {
+					"Label": "%name%",
+					"Menu": 1,
+					"Slots": [
+						"One",
+						"Two"
+					],
+					"Text": "One or two?"
+				},
+				"Type": "Scene",
+				"X": 1620,
+				"Y": 100
+			},
+			"script_171977351174001692582478": {
+				"Connections": {
+					"0": {
+						"script_171977352075402306841049": 0
+					}
+				},
+				"Fields": {
+					"Background": "background.png",
+					"Objects": {
+						"cube.png_1719774267559522988": {
+							"Flip": 0,
+							"Layout": {
+								"AnchorBottom": 0.474999994039536,
+								"AnchorLeft": 0.115000002086163,
+								"AnchorRight": 0.379999995231628,
+								"AnchorTop": 0,
+								"OffsetBottom": 0,
+								"OffsetLeft": 0,
+								"OffsetRight": 0,
+								"OffsetTop": 0
+							},
+							"Path": "cube.png"
+						},
+						"cube.png_17197743014068026605": {
+							"Flip": 1,
+							"Layout": {
+								"AnchorBottom": 1,
+								"AnchorLeft": 0.595000028610229,
+								"AnchorRight": 1,
+								"AnchorTop": 0.375,
+								"OffsetBottom": 0,
+								"OffsetLeft": 20,
+								"OffsetRight": 20,
+								"OffsetTop": 0
+							},
+							"Path": "cube.png"
+						}
+					}
+				},
+				"Type": "Screen",
+				"X": 240,
+				"Y": -20
+			},
+			"script_171977352075402306841049": {
+				"Connections": {
+					"0": {
+						"script_171977353703903181345752": 0
+					}
+				},
+				"Fields": {
+					"Sound": "major.mp3"
+				},
+				"Type": "Sound",
+				"X": 840,
+				"Y": 80
+			},
+			"script_171977353703903181345752": {
+				"Connections": {
+					"0": {
+						"script_17197735002370763709240": 0
+					}
+				},
+				"Fields": {
+					"Call": "test_call"
+				},
+				"Type": "Call",
+				"X": 1240,
+				"Y": 100
+			},
+			"script_171977364524601159148473": {
+				"Connections": {
+
+				},
+				"Fields": {
+					"Label": "[b]No repl[/b]",
+					"Menu": 0,
+					"Slots": [],
+					"Text": "1"
+				},
+				"Type": "Scene",
+				"X": 2180,
+				"Y": 120
+			},
+			"script_17197736749640784218452": {
+				"Connections": {
+
+				},
+				"Fields": {
+					"Label": "No repl",
+					"Menu": 0,
+					"Slots": [],
+					"Text": "2"
+				},
+				"Type": "Scene",
+				"X": 2180,
+				"Y": 480
+			}
+		}
+	},
+	"Meta": {
+		"Author": "Leonid Briskindov",
+		"BaseLanguage": 1,
+		"Language": "",
+		"Project": "VNDS Test",
+		"ProjectVersion": 2,
+		"Time": 1719774485.269,
+		"VNDSVersion": "dev1"
+	},
+	"Type": "Visual Novel Development Studio"
+}

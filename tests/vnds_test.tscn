@@ -1,0 +1,78 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxpe2cycns56c"]
+
+[ext_resource type="Script" path="res://addons/vnds_godotplugin/vnds.gd" id="1_351aw"]
+[ext_resource type="Script" path="res://tests/vnds_test.gd" id="1_gpvqf"]
+
+[node name="VNDS Test" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gpvqf")
+
+[node name="VNDS" type="Node" parent="."]
+script = ExtResource("1_351aw")
+project_path = "res://tests/vnds_test_project/project.json"
+screen_node_path = NodePath("../Screen")
+label_node_path = NodePath("../ScenePanel/Label")
+text_node_path = NodePath("../ScenePanel/SceneContainer/Text")
+audio_node_path = NodePath("../Audio")
+autostart = true
+
+[node name="Screen" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="ScenePanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -162.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="SceneContainer" type="VBoxContainer" parent="ScenePanel"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -132.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Text" type="RichTextLabel" parent="ScenePanel/SceneContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+
+[node name="MenuContainer" type="VBoxContainer" parent="ScenePanel/SceneContainer"]
+layout_mode = 2
+
+[node name="Label" type="RichTextLabel" parent="ScenePanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -162.0
+offset_bottom = -132.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+
+[node name="Audio" type="AudioStreamPlayer" parent="."]
+
+[connection signal="call" from="VNDS" to="." method="_on_vnds_call"]
+[connection signal="finished" from="VNDS" to="." method="_on_vnds_finished"]
+[connection signal="script_node_selected" from="VNDS" to="." method="_on_vnds_script_node_selected"]
+[connection signal="show_menu" from="VNDS" to="." method="_on_vnds_show_menu"]
